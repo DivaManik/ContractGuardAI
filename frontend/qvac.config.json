@@ -1,0 +1,6 @@
+{
+  "cacheDirectory": "D:\\.qvac\\models",
+  "loggerLevel": "warn",
+  "loggerConsoleOutput": false,
+  "plugins": ["@qvac/sdk/llamacpp-completion/plugin"]
+}

@@ -1,0 +1,12 @@
+.anchor
+.DS_Store
+target
+**/*.rs.bk
+node_modules
+test-ledger
+.yarn
+.surfpool
+my-wallet.json
+ai-agent-keypair.json
+.env
+my-wallet.json

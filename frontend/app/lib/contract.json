@@ -1,0 +1,2745 @@
+{
+  "address": "2Htsz7Xf4YWZTc8tupBTgsFHwZNZDzi59FRr9AWmxdNq",
+  "metadata": {
+    "name": "contract",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "accept_contract",
+      "discriminator": [
+        217,
+        254,
+        164,
+        16,
+        244,
+        59,
+        30,
+        81
+      ],
+      "accounts": [
+        {
+          "name": "contractor",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "contract",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  97,
+                  99,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "contract.client",
+                "account": "ContractAccount"
+              },
+              {
+                "kind": "account",
+                "path": "contractor"
+              },
+              {
+                "kind": "account",
+                "path": "contract.created_at",
+                "account": "ContractAccount"
+              }
+            ]
+          }
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "admin_cancel",
+      "discriminator": [
+        34,
+        225,
+        37,
+        131,
+        38,
+        121,
+        43,
+        237
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "client"
+        },
+        {
+          "name": "contractor"
+        },
+        {
+          "name": "contract",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  97,
+                  99,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "client"
+              },
+              {
+                "kind": "account",
+                "path": "contractor"
+              },
+              {
+                "kind": "account",
+                "path": "contract.created_at",
+                "account": "ContractAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "escrow_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "contract"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "client_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "client"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "token_program"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "approve_checkpoint",
+      "discriminator": [
+        250,
+        243,
+        123,
+        242,
+        101,
+        200,
+        73,
+        95
+      ],
+      "accounts": [
+        {
+          "name": "client",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "contractor"
+        },
+        {
+          "name": "contract",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  97,
+                  99,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "client"
+              },
+              {
+                "kind": "account",
+                "path": "contractor"
+              },
+              {
+                "kind": "account",
+                "path": "contract.created_at",
+                "account": "ContractAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "escrow_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "contract"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "contractor_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "contractor"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "client_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "client"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "token_program"
+        }
+      ],
+      "args": [
+        {
+          "name": "checkpoint_index",
+          "type": "u8"
+        },
+        {
+          "name": "ai_report_hash",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "approve_extension",
+      "discriminator": [
+        202,
+        138,
+        100,
+        241,
+        89,
+        154,
+        3,
+        53
+      ],
+      "accounts": [
+        {
+          "name": "client",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "contractor"
+        },
+        {
+          "name": "contract",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  97,
+                  99,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "client"
+              },
+              {
+                "kind": "account",
+                "path": "contractor"
+              },
+              {
+                "kind": "account",
+                "path": "contract.created_at",
+                "account": "ContractAccount"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "checkpoint_index",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "cancel_contract",
+      "discriminator": [
+        3,
+        168,
+        37,
+        73,
+        140,
+        194,
+        156,
+        165
+      ],
+      "accounts": [
+        {
+          "name": "client",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "contractor"
+        },
+        {
+          "name": "contract",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  97,
+                  99,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "client"
+              },
+              {
+                "kind": "account",
+                "path": "contractor"
+              },
+              {
+                "kind": "account",
+                "path": "contract.created_at",
+                "account": "ContractAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "escrow_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "contract"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "client_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "client"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "token_program"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "claim_checkpoint",
+      "discriminator": [
+        22,
+        72,
+        57,
+        5,
+        103,
+        92,
+        116,
+        231
+      ],
+      "accounts": [
+        {
+          "name": "contractor",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "client"
+        },
+        {
+          "name": "contract",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  97,
+                  99,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "client"
+              },
+              {
+                "kind": "account",
+                "path": "contractor"
+              },
+              {
+                "kind": "account",
+                "path": "contract.created_at",
+                "account": "ContractAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "escrow_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "contract"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "contractor_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "contractor"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "client_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "client"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "token_program"
+        }
+      ],
+      "args": [
+        {
+          "name": "checkpoint_index",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "create_contract",
+      "discriminator": [
+        244,
+        48,
+        244,
+        178,
+        216,
+        88,
+        122,
+        52
+      ],
+      "accounts": [
+        {
+          "name": "client",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "contractor"
+        },
+        {
+          "name": "contract",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  97,
+                  99,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "client"
+              },
+              {
+                "kind": "account",
+                "path": "contractor"
+              },
+              {
+                "kind": "arg",
+                "path": "created_at"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "escrow_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "contract"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "client_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "client"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "created_at",
+          "type": "i64"
+        },
+        {
+          "name": "contract_hash",
+          "type": "string"
+        },
+        {
+          "name": "ai_review_hash",
+          "type": "string"
+        },
+        {
+          "name": "total_amount",
+          "type": "u64"
+        },
+        {
+          "name": "late_penalty_per_day_bps",
+          "type": "u16"
+        },
+        {
+          "name": "max_penalty_bps",
+          "type": "u16"
+        },
+        {
+          "name": "dispute_window_days",
+          "type": "u8"
+        },
+        {
+          "name": "grace_period_days",
+          "type": "u8"
+        },
+        {
+          "name": "max_revisions_per_checkpoint",
+          "type": "u8"
+        },
+        {
+          "name": "checkpoints",
+          "type": {
+            "vec": {
+              "defined": {
+                "name": "CheckpointInput"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "create_mock_mint",
+      "discriminator": [
+        186,
+        150,
+        36,
+        212,
+        159,
+        183,
+        46,
+        144
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  100,
+                  99,
+                  95,
+                  109,
+                  105,
+                  110,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "expire_checkpoint",
+      "discriminator": [
+        107,
+        232,
+        48,
+        207,
+        145,
+        219,
+        235,
+        237
+      ],
+      "accounts": [
+        {
+          "name": "client",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "contractor"
+        },
+        {
+          "name": "contract",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  97,
+                  99,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "client"
+              },
+              {
+                "kind": "account",
+                "path": "contractor"
+              },
+              {
+                "kind": "account",
+                "path": "contract.created_at",
+                "account": "ContractAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "escrow_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "contract"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "client_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "client"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "token_program"
+        }
+      ],
+      "args": [
+        {
+          "name": "checkpoint_index",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "initialize_config",
+      "discriminator": [
+        208,
+        127,
+        21,
+        1,
+        194,
+        190,
+        196,
+        70
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "ai_agent",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "mint_usdc",
+      "discriminator": [
+        18,
+        18,
+        44,
+        151,
+        229,
+        134,
+        223,
+        5
+      ],
+      "accounts": [
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  100,
+                  99,
+                  95,
+                  109,
+                  105,
+                  110,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "user_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "user"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "mint_record",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  116,
+                  95,
+                  114,
+                  101,
+                  99,
+                  111,
+                  114,
+                  100
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user"
+              }
+            ]
+          }
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "reject_extension",
+      "discriminator": [
+        103,
+        229,
+        117,
+        220,
+        156,
+        164,
+        244,
+        241
+      ],
+      "accounts": [
+        {
+          "name": "client",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "contractor"
+        },
+        {
+          "name": "contract",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  97,
+                  99,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "client"
+              },
+              {
+                "kind": "account",
+                "path": "contractor"
+              },
+              {
+                "kind": "account",
+                "path": "contract.created_at",
+                "account": "ContractAccount"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "checkpoint_index",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "request_ai_review",
+      "discriminator": [
+        91,
+        246,
+        52,
+        188,
+        130,
+        19,
+        83,
+        250
+      ],
+      "accounts": [
+        {
+          "name": "contractor",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "contract",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  97,
+                  99,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "contract.client",
+                "account": "ContractAccount"
+              },
+              {
+                "kind": "account",
+                "path": "contractor"
+              },
+              {
+                "kind": "account",
+                "path": "contract.created_at",
+                "account": "ContractAccount"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "checkpoint_index",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "request_extension",
+      "discriminator": [
+        231,
+        210,
+        223,
+        82,
+        160,
+        62,
+        136,
+        88
+      ],
+      "accounts": [
+        {
+          "name": "contractor",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "client"
+        },
+        {
+          "name": "contract",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  97,
+                  99,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "client"
+              },
+              {
+                "kind": "account",
+                "path": "contractor"
+              },
+              {
+                "kind": "account",
+                "path": "contract.created_at",
+                "account": "ContractAccount"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "checkpoint_index",
+          "type": "u8"
+        },
+        {
+          "name": "new_deadline",
+          "type": "i64"
+        }
+      ]
+    },
+    {
+      "name": "request_revision",
+      "discriminator": [
+        205,
+        195,
+        75,
+        171,
+        242,
+        149,
+        90,
+        14
+      ],
+      "accounts": [
+        {
+          "name": "client",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "contractor"
+        },
+        {
+          "name": "contract",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  97,
+                  99,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "client"
+              },
+              {
+                "kind": "account",
+                "path": "contractor"
+              },
+              {
+                "kind": "account",
+                "path": "contract.created_at",
+                "account": "ContractAccount"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "checkpoint_index",
+          "type": "u8"
+        },
+        {
+          "name": "ai_report_hash",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "resolve_dispute",
+      "discriminator": [
+        231,
+        6,
+        202,
+        6,
+        96,
+        103,
+        12,
+        230
+      ],
+      "accounts": [
+        {
+          "name": "resolver",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "client"
+        },
+        {
+          "name": "contractor"
+        },
+        {
+          "name": "contract",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  97,
+                  99,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "client"
+              },
+              {
+                "kind": "account",
+                "path": "contractor"
+              },
+              {
+                "kind": "account",
+                "path": "contract.created_at",
+                "account": "ContractAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "escrow_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "contract"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "contractor_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "contractor"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "client_token_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "client"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "token_program"
+        }
+      ],
+      "args": [
+        {
+          "name": "checkpoint_index",
+          "type": "u8"
+        },
+        {
+          "name": "favor_contractor",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "submit_checkpoint",
+      "discriminator": [
+        47,
+        64,
+        6,
+        25,
+        169,
+        125,
+        69,
+        117
+      ],
+      "accounts": [
+        {
+          "name": "contractor",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "contract",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  116,
+                  114,
+                  97,
+                  99,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "contract.client",
+                "account": "ContractAccount"
+              },
+              {
+                "kind": "account",
+                "path": "contractor"
+              },
+              {
+                "kind": "account",
+                "path": "contract.created_at",
+                "account": "ContractAccount"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "checkpoint_index",
+          "type": "u8"
+        },
+        {
+          "name": "evidence_hash",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "ContractAccount",
+      "discriminator": [
+        158,
+        92,
+        19,
+        55,
+        102,
+        209,
+        113,
+        218
+      ]
+    },
+    {
+      "name": "ProgramConfig",
+      "discriminator": [
+        196,
+        210,
+        90,
+        231,
+        144,
+        149,
+        140,
+        63
+      ]
+    },
+    {
+      "name": "UserMintRecord",
+      "discriminator": [
+        120,
+        250,
+        207,
+        149,
+        49,
+        124,
+        10,
+        58
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "UnauthorizedClient",
+      "msg": "Unauthorized: only the client can perform this action"
+    },
+    {
+      "code": 6001,
+      "name": "UnauthorizedContractor",
+      "msg": "Unauthorized: only the contractor can perform this action"
+    },
+    {
+      "code": 6002,
+      "name": "InvalidContractStatus",
+      "msg": "Invalid contract status for this action"
+    },
+    {
+      "code": 6003,
+      "name": "InvalidCheckpointStatus",
+      "msg": "Invalid checkpoint status for this action"
+    },
+    {
+      "code": 6004,
+      "name": "InvalidCheckpointIndex",
+      "msg": "Checkpoint index is out of range"
+    },
+    {
+      "code": 6005,
+      "name": "PaymentAmountMismatch",
+      "msg": "Sum of checkpoint payment amounts must equal total_amount"
+    },
+    {
+      "code": 6006,
+      "name": "EmptyHash",
+      "msg": "Hash string cannot be empty"
+    },
+    {
+      "code": 6007,
+      "name": "EmptyDescriptionHash",
+      "msg": "Description hash cannot be empty"
+    },
+    {
+      "code": 6008,
+      "name": "InvalidCheckpointCount",
+      "msg": "Checkpoint count must be between 1 and 10"
+    },
+    {
+      "code": 6009,
+      "name": "MaxRevisionsExceeded",
+      "msg": "Maximum revision count exceeded for this checkpoint"
+    },
+    {
+      "code": 6010,
+      "name": "InvalidDeadline",
+      "msg": "New deadline must be after the current deadline"
+    },
+    {
+      "code": 6011,
+      "name": "DeadlineNotExpired",
+      "msg": "Checkpoint deadline has not expired yet"
+    },
+    {
+      "code": 6012,
+      "name": "DisputeWindowNotExpired",
+      "msg": "Dispute window has not expired yet — client still has time to review"
+    },
+    {
+      "code": 6013,
+      "name": "CheckpointAlreadySubmitted",
+      "msg": "Checkpoint has already been submitted, cannot expire"
+    },
+    {
+      "code": 6014,
+      "name": "InsufficientEscrowFunds",
+      "msg": "Insufficient funds in escrow token account"
+    },
+    {
+      "code": 6015,
+      "name": "CannotCancelWithSubmittedCheckpoints",
+      "msg": "Cannot cancel: there are checkpoints in Submitted status"
+    },
+    {
+      "code": 6016,
+      "name": "ArithmeticOverflow",
+      "msg": "Arithmetic overflow during penalty calculation"
+    },
+    {
+      "code": 6017,
+      "name": "InvalidPenaltyConfig",
+      "msg": "Penalty BPS exceeds 10,000 (100%) — invalid configuration"
+    },
+    {
+      "code": 6018,
+      "name": "InvalidContractParties",
+      "msg": "Client and contractor cannot be the same account"
+    },
+    {
+      "code": 6019,
+      "name": "UnauthorizedResolver",
+      "msg": "Unauthorized: only the AI agent or admin can resolve disputes"
+    },
+    {
+      "code": 6020,
+      "name": "CheckpointNotDisputed",
+      "msg": "Checkpoint is not in Disputed status"
+    },
+    {
+      "code": 6021,
+      "name": "ConfigAlreadyInitialized",
+      "msg": "Program config is already initialized"
+    },
+    {
+      "code": 6022,
+      "name": "MintCooldownNotExpired",
+      "msg": "Mint cooldown not expired — you can only mint once per day"
+    },
+    {
+      "code": 6023,
+      "name": "InvalidTokenAccount",
+      "msg": "Invalid token account — mint or owner mismatch"
+    },
+    {
+      "code": 6024,
+      "name": "MintNotInitialized",
+      "msg": "Mock USDC mint has not been created yet"
+    },
+    {
+      "code": 6025,
+      "name": "UnauthorizedAdmin",
+      "msg": "Unauthorized: only the admin can perform this action"
+    },
+    {
+      "code": 6026,
+      "name": "CannotCancelWithDisputedCheckpoints",
+      "msg": "Cannot cancel: there are checkpoints in Disputed status"
+    },
+    {
+      "code": 6027,
+      "name": "MaxRevisionsTooHigh",
+      "msg": "max_revisions_per_checkpoint cannot exceed 10"
+    },
+    {
+      "code": 6028,
+      "name": "SupplyCapReached",
+      "msg": "Mock USDC supply cap reached — no more tokens can be minted"
+    },
+    {
+      "code": 6029,
+      "name": "InactivityPeriodNotReached",
+      "msg": "Contract has not been inactive long enough for admin cancellation"
+    },
+    {
+      "code": 6030,
+      "name": "CannotCancelWithAwaitingAiReview",
+      "msg": "Cannot cancel: there are checkpoints awaiting AI review"
+    },
+    {
+      "code": 6031,
+      "name": "InvalidCreatedAt",
+      "msg": "created_at must be within 5 minutes in the past or 1 hour in the future"
+    }
+  ],
+  "types": [
+    {
+      "name": "CheckpointData",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "checkpoint_number",
+            "type": "u8"
+          },
+          {
+            "name": "description_hash",
+            "type": "string"
+          },
+          {
+            "name": "evidence_hash",
+            "type": "string"
+          },
+          {
+            "name": "ai_report_hash",
+            "type": "string"
+          },
+          {
+            "name": "payment_amount",
+            "type": "u64"
+          },
+          {
+            "name": "penalty_amount",
+            "type": "u64"
+          },
+          {
+            "name": "effective_payment",
+            "type": "u64"
+          },
+          {
+            "name": "status",
+            "type": {
+              "defined": {
+                "name": "CheckpointStatus"
+              }
+            }
+          },
+          {
+            "name": "deadline",
+            "type": "i64"
+          },
+          {
+            "name": "new_deadline_requested",
+            "type": "i64"
+          },
+          {
+            "name": "revision_count",
+            "type": "u8"
+          },
+          {
+            "name": "submitted_at",
+            "type": "i64"
+          },
+          {
+            "name": "reviewed_at",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CheckpointInput",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "description_hash",
+            "type": "string"
+          },
+          {
+            "name": "payment_amount",
+            "type": "u64"
+          },
+          {
+            "name": "deadline",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CheckpointStatus",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Pending"
+          },
+          {
+            "name": "ExtensionPending"
+          },
+          {
+            "name": "Submitted"
+          },
+          {
+            "name": "Approved"
+          },
+          {
+            "name": "NeedsRevision"
+          },
+          {
+            "name": "Expired"
+          },
+          {
+            "name": "Disputed"
+          },
+          {
+            "name": "AwaitingAiReview"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ContractAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "client",
+            "type": "pubkey"
+          },
+          {
+            "name": "contractor",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "contract_hash",
+            "type": "string"
+          },
+          {
+            "name": "ai_review_hash",
+            "type": "string"
+          },
+          {
+            "name": "total_amount",
+            "type": "u64"
+          },
+          {
+            "name": "total_checkpoints",
+            "type": "u8"
+          },
+          {
+            "name": "completed_checkpoints",
+            "type": "u8"
+          },
+          {
+            "name": "status",
+            "type": {
+              "defined": {
+                "name": "ContractStatus"
+              }
+            }
+          },
+          {
+            "name": "created_at",
+            "type": "i64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "late_penalty_per_day_bps",
+            "type": "u16"
+          },
+          {
+            "name": "max_penalty_bps",
+            "type": "u16"
+          },
+          {
+            "name": "dispute_window_days",
+            "type": "u8"
+          },
+          {
+            "name": "grace_period_days",
+            "type": "u8"
+          },
+          {
+            "name": "max_revisions_per_checkpoint",
+            "type": "u8"
+          },
+          {
+            "name": "checkpoints",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "CheckpointData"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ContractStatus",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Draft"
+          },
+          {
+            "name": "Active"
+          },
+          {
+            "name": "Completed"
+          },
+          {
+            "name": "Cancelled"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProgramConfig",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "ai_agent",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_minted",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UserMintRecord",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "user",
+            "type": "pubkey"
+          },
+          {
+            "name": "last_mint_at",
+            "type": "i64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    }
+  ]
+}
