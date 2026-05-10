@@ -12,6 +12,11 @@ Before you sign anything, ContractGuard tells you exactly what's risky, what's u
 
 ---
 
+## Developer Introduction
+[![Watch Introduction](https://img.youtube.com/vi/WjRnq3tXAwE/0.jpg)](https://youtu.be/WjRnq3tXAwE)
+
+---
+
 ## The Problem We Solve
 
 Every year, thousands of freelancers and vendors in Indonesia sign contracts they don't fully understand — and lose money because of it.

@@ -5,6 +5,12 @@ AI-powered contract auditing and on-chain escrow platform built on Solana. Uploa
 ---
 ## Original Repo Orgs
 [ContracGuardAI Organization](https://github.com/orgs/ContracGuardAI/repositories)
+
+---
+
+## Developer Introduction
+[![Watch Introduction](https://img.youtube.com/vi/WjRnq3tXAwE/0.jpg)](https://youtu.be/WjRnq3tXAwE)
+
 ---
 
 
