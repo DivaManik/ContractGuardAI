@@ -8,6 +8,9 @@ AI-powered contract auditing and on-chain escrow platform built on Solana. Uploa
 
 ---
 
+## Demo Video
+[![Watch Demo](https://img.youtube.com/vi/8YNImxDP6XY/0.jpg)](https://www.youtube.com/watch?v=8YNImxDP6XY)
+
 ## Developer Introduction
 [![Watch Introduction](https://img.youtube.com/vi/WjRnq3tXAwE/0.jpg)](https://youtu.be/WjRnq3tXAwE)
 
