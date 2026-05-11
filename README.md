@@ -9,6 +9,9 @@ AI-powered contract auditing and on-chain escrow platform built on Solana. Uploa
 ## Documentation
 [ContractGuard AI Docs](https://contractguard-ai.gitbook.io/contractguard-ai-docs/)
 
+## Hackathon Submission
+[View on Colosseum Arena](https://arena.colosseum.org/projects/explore/contractguardai)
+
 ---
 
 ## Demo Video
