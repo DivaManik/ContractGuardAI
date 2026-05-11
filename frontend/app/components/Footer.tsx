@@ -54,8 +54,8 @@ export default function Footer() {
         {/* Nav links */}
         <div style={{ display: "flex", gap: "30px" }}>
           {[
-            { label: "GitHub",       href: "#" },
-            { label: t("footer.docs"), href: "#" },
+            { label: "GitHub", href: "https://github.com/DivaManik/ContractGuardAI" },
+            { label: t("footer.docs"), href: "https://contractguard-ai.gitbook.io/contractguard-ai-docs/" },
           ].map(({ label, href }) => (
             <Link key={label} href={href} style={{
               fontSize: "13px", color: "var(--text-4)",
